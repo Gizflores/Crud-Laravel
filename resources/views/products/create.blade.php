@@ -8,8 +8,14 @@
         Nuevo producto
         <a href="{{route('products.index') }}" class="btn btn-primary btn-sm">editar</a>
         </h2>
-        
-        Formulario
+        @include('products.fragment.error')
+
+        {!! Form::open(['route' => 'products.store']) !!}
+
+        @include('products.fragment.form')
+
+        {!! Form::close()!!}
+
         </div>
 
         <div class="col-sm-4">

@@ -8,6 +8,8 @@
         Editar producto
         <a href="{{route('products.index') }}" class="btn btn-primary btn-sm">editar</a>
         </h2>
+
+        @include('products.fragment.error')
         
         {!! Form::model($product, ['route' => ['products.update', $product->id], 'method' => 'PUT']) !!}
 
