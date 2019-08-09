@@ -5,13 +5,11 @@
 <div class="row">
         <div class="col-sm-8">
         <h2>
-        {{$product->name}}
-        <a href="{{route('products.edit',$product->id) }}" class="btn btn-primary btn-sm">editar</a>
+        Nuevo producto
+        <a href="{{route('products.index') }}" class="btn btn-primary btn-sm">editar</a>
         </h2>
-        <p>
-        {{$product->short}}
-        </p>
-        {!! $product->body !!}
+        
+        Formulario
         </div>
 
         <div class="col-sm-4">

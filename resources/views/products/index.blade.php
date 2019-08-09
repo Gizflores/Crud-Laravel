@@ -1,8 +1,8 @@
 @extends('layout')
 
 @section('content')
-
-<div class="col-sm-10">
+<div class="row">
+<div class="col-sm-8">
     <h2>Listado de Productos
        <a href="{{route('products.create')}}" class="btn btn-primary pull-right">Nuevo</a>
     </h2>
@@ -42,13 +42,13 @@
     </tbody>
     </table>
     {!! $products->render() !!}
+
+      
+  </div>
+          <div class="col-sm-4">
+          @include('products.fragment.aside')
+          </div>
   </div>
 
-
-
-
-<div class="col-sm-4">
-    Mensaje
-</div>
 
 @endsection
