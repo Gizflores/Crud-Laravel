@@ -29,11 +29,21 @@ class ProductController extends Controller
     }
 
     public function store(ProductRequest $request){       
-        return 'producto guardado';
+        $product = new Product;
+        $product->name  = $request->name;
+        $product->short = $request->short;
+        $product->body  = $request->body;
+        $product->save();
+        return redirect()->route('products.index')->with('info','El prodcuto fue creado');
     }
 
-    public function update(ProductRequest $request, $id){       
-        return 'producto guardado' . $id;
+    public function update(ProductRequest $request, $id){   
+        $product = Product::find($id);
+        $product->name  = $request->name;
+        $product->short = $request->short;
+        $product->body  = $request->body;
+        $product->save();
+        return redirect()->route('products.index')->with('info','El prodcuto fue actualizdo');
     }
 
     public function edit($id){

@@ -6,7 +6,6 @@
         <div class="col-sm-8">
         <h2>
         Editar producto
-        <a href="{{route('products.index') }}" class="btn btn-primary btn-sm">editar</a>
         </h2>
 
         @include('products.fragment.error')
